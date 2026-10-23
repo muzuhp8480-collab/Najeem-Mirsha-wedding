@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { MapPin, Play, Pause, Navigation, Calendar, Clock, Sparkles } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 // Assets
 const COUPLE_IMG = '/assets/couple.jpg';
@@ -1226,6 +1227,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#031812] text-[#fdfbf7] selection:bg-[#0b3a2d] selection:text-[#f5d58f] relative">
+      {/* Vercel Web Analytics */}
+      <Analytics />
+
       {/* Background Wedding Invitation Music */}
       <audio ref={audioRef} src={WEDDING_AUDIO} loop preload="auto" />
 
